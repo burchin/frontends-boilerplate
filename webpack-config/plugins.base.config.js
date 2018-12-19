@@ -44,7 +44,7 @@ pages.forEach((page) => {
 plugins.push(new AddAssetHtmlWebpackPlugin([{
     filepath: path.resolve(dirs.rootDir, './vendor/*.dll.js'),
     // outputPath: path.resolve(dirs.buildDir, './vendor'),
-    includeSourcemap: true,
+    includeSourcemap: false,
     publicPath: '/'
 }]))
 
