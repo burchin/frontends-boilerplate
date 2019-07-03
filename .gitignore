@@ -48,3 +48,5 @@ manifest\.json
 vendor/vendor\.dll\.js
 
 vendor/vendor\.dll\.js\.map
+
+lib/
