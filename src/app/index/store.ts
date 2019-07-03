@@ -1,11 +1,17 @@
 import { observable, action } from 'mobx';
 
 class Store {
-  @observable logining = 'aaa';
+  @observable init = false;
+  @observable name = 'aaa';
 
   @action
-  test = () => {
-    this.logining = 'bbb';
+  setName = () => {
+    this.name = 'bbb';
+  };
+
+  @action
+  finishInit = () => {
+    this.init = true;
   };
 }
 
