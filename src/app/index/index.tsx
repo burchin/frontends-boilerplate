@@ -1,3 +1,4 @@
+import 'babel-polyfill';
 import React from 'react';
 import intl from 'react-intl-universal';
 import { render } from 'react-dom';
