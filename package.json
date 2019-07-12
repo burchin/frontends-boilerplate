@@ -2,7 +2,7 @@
   "name": "frontends-boilerplate",
   "version": "1.0.8",
   "description": "前端开发脚手架",
-  "author": "ZG FED",
+  "author": "ZX FED",
   "license": "MIT",
   "main": "index.js",
   "repository": {
@@ -13,6 +13,7 @@
     "lint"
   ],
   "scripts": {
+    "init": "npm install && npm run lib",
     "lint": "node lint.js",
     "lint:fix": "npm run lint --fix",
     "clean:lib": "rimraf ./lib",
