@@ -54,7 +54,6 @@
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/plugin-proposal-decorators": "^7.4.4",
     "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
-    "@babel/plugin-transform-runtime": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-typescript": "^7.3.3",
@@ -64,7 +63,6 @@
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.4",
     "babel-plugin-import": "^1.11.0",
-    "babel-polyfill": "^6.26.0",
     "compression-webpack-plugin": "^1.1.11",
     "copy-webpack-plugin": "^4.6.0",
     "css-loader": "^1.0.0",
@@ -111,7 +109,6 @@
   "dependencies": {
     "antd-mobile": "^2.2.14",
     "axios": "^0.18.0",
-    "core-js": "^3.2.1",
     "mobx": "^5.9.0",
     "mobx-react": "^5.4.3",
     "react": "^16.8.6",
