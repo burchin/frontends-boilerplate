@@ -113,7 +113,17 @@ const config = {
       test: /\.(js|css)$/,
       threshold: 10240,
       minRatio: 0.8
+<<<<<<< HEAD
     })
+=======
+    }),
+    new CopyPlugin([
+      {
+        from: path.resolve(dirs.src, '.public/'),
+        to: 'static/'
+      }
+    ])
+>>>>>>> 41e2c90faa204eff015ed0377e9f22ad16c00c48
   ])
 };
 
