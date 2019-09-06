@@ -1,0 +1,121 @@
+{
+  "name": "front-boilerplate",
+  "version": "1.0.8",
+  "author": "",
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/ziguang_burchin/frontends-boilerplate.git"
+  },
+  "lint-staged": {
+    "src/**/*.ts": [
+      "eslint",
+      "git add"
+    ],
+    "src/**/*.tsx": [
+      "eslint",
+      "git add"
+    ],
+    "src/**/*.scss": [
+      "stylelint",
+      "git add"
+    ],
+    "src/**/*.css": [
+      "stylelint",
+      "git add"
+    ],
+    "src/**/*.less": [
+      "stylelint",
+      "git add"
+    ]
+  },
+  "scripts": {
+    "precommit": "lint-staged",
+    "lint": "node lint.js",
+    "prettier": "prettier --write ./src/**/*.{tsx,ts,css,less,scss}",
+    "lint:fix": "npm run lint --fix",
+    "clean:dist": "rimraf ./dist",
+    "clean:modules": "rimraf ./node_modules",
+    "clean:lib": "rimraf ./lib",
+    "prelib": "npm run clean:lib",
+    "lib": "webpack --progress --config ./webpack/webpack.lib.conf.js -p",
+    "build": "npm run clean:dist && webpack --env=prod",
+    "build:anal": "npm run clean:dist && webpack --anal=1",
+    "build:local": "npm run clean:dist && webpack --env=local",
+    "build:test": "npm run clean:dist && webpack --env=test",
+    "build:mock": "npm run clean:dist && webpack --env=mock",
+    "mock": "webpack-dev-server --env=mock",
+    "local": "webpack-dev-server --env=local",
+    "pro": "webpack-dev-server --env=prod"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-decorators": "^7.4.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
+    "@babel/plugin-transform-runtime": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.3.3",
+    "@typescript-eslint/eslint-plugin": "^2.1.0",
+    "@typescript-eslint/parser": "^2.1.0",
+    "add-asset-html-webpack-plugin": "^2.1.3",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-import": "^1.11.0",
+    "babel-polyfill": "^6.26.0",
+    "compression-webpack-plugin": "^1.1.11",
+    "copy-webpack-plugin": "^4.6.0",
+    "css-loader": "^1.0.0",
+    "cssnano": "^3.10.0",
+    "editorconfig": "^0.15.3",
+    "eslint": "^5.3.0",
+    "eslint-config-alloy": "^3.0.0",
+    "eslint-loader": "^2.1.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-typescript": "^0.14.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^1.1.11",
+    "happypack": "^5.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "husky": "^3.0.5",
+    "json-loader": "^0.5.7",
+    "less": "^3.9.0",
+    "less-loader": "^4.1.0",
+    "lint-staged": "^9.2.5",
+    "node-sass": "^4.9.3",
+    "postcss-aspect-ratio-mini": "0.0.2",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-flexbugs-fixes": "^4.1.0",
+    "postcss-loader": "2.0.8",
+    "postcss-px-to-viewport": "^1.1.1",
+    "postcss-viewport-units": "^0.1.4",
+    "postcss-write-svg": "^3.0.1",
+    "rimraf": "^3.0.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.22.1",
+    "stylelint": "^10.0.1",
+    "stylelint-config-standard": "^18.3.0",
+    "terser-webpack-plugin": "^2.0.0",
+    "typescript": "^3.5.1",
+    "typescript-eslint-parser": "^22.0.0",
+    "url-loader": "^1.1.0",
+    "webpack": "^4.16.5",
+    "webpack-bundle-analyzer": "^3.0.3",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5",
+    "webpack-parallel-uglify-plugin": "^1.1.0"
+  },
+  "dependencies": {
+    "antd-mobile": "^2.2.14",
+    "axios": "^0.18.0",
+    "core-js": "^3.2.1",
+    "mobx": "^5.9.0",
+    "mobx-react": "^5.4.3",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.4",
+    "react-router-dom": "^5.0.1"
+  }
+}
